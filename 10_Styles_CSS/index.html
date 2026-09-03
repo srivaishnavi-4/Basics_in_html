@@ -1,7 +1,16 @@
 <!DOCTYPE html> <!--element-->
 <html lang="en"> <!--lang attribute-->
-    <head> <title>Welcome</title></head><!--nested element-->
-    <body>
-        
+    <head> <title>Welcome</title>
+        <style>
+        body { background-color: #f0f0f0; }
+        h1 { color: navy; margin-left: 20px; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    </head><!--nested element-->
+    <body style="font-size: 30px;">
+         <h1>This is a heading</h1><!--internal css-->
+        <p>Inline css Style</p>
+        <p style="color: blue; font-size: 16px;">This paragraph is styled using inline CSS.</p><!--inline css-->
+        <pre>This paragraph is styled using external css.</pre><!--external css-->
     </body>
 </html>

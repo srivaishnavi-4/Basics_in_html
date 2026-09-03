@@ -1,7 +1,36 @@
 <!DOCTYPE html> <!--element-->
 <html lang="en"> <!--lang attribute-->
     <head> <title>Welcome</title></head><!--nested element-->
-    <body>
-        
+    <body style="font-size:30px;">
+        <p>Text Links</p>
+      <a href="https://www.google.com" target="_self">Click for google!!!</a><br><!--_self-->
+      <a href="https://www.stackoverflow.com" target="_parent">Click for stack overflow!!</a><br><!--_parent-->
+      <a href="https://www.google.com" target="_top">Click for google!!!</a>  <br><!--_top-->
+      <a href="https://www.google.com" target="_blank">Click for google!!!</a>  <br><!--_blank-->
+      <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Click for google safely!!!</a>  <br><!--_blank 
+      with no opener and norefferer-->
+
+      <p>Image links</p><br>
+      <p>with hyperlink</p>
+      <a href="https://medium.com"><img src="\gif_image.gif" alt="mushroom image"/></a><br><!--image with hyperlink-->
+      <p>with toolkit</p><br>
+      <a href="https://medium.com" title="go to medium"><img src="\gif_image.gif" alt="mushroom image"/></a>
+      <!--image with tooltip-->
+      <br><p>with usemap</p>
+      <!--Use map-->
+      <br><img src="\gif_image.gif" usemap="#shape-map" alt="Interactive Shapes">
+      <map name="shape-map">
+      <!-- Clickable rectangle area -->
+      <area shape="rect" coords="34,44,270,350" href="https://www.google.com" alt="Rectangle Page">
+      <!-- Clickable circle area -->
+      <area shape="circle" coords="450,200,60" href="https://www.medium.com" alt="Circle Page">
+      </map>
+     <br> <p>with ismap</p>
+      <br><a href="https://medium.com"><img src="\gif_image.gif" ismap alt="mushroom image"/></a><br><!--image with ismap-->
+      
+      <p>With email Links</p>
+         <a href="mailto:example@example.com?subject=Hello%20there&body=This%20is%20a%20predefined%20email%20body."> 
+      Click here to Send Mail</a>
+    
     </body>
 </html>
