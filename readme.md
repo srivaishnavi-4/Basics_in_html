@@ -1,14 +1,13 @@
-```
-#HTML:#
-##Working of HTML:## 
-An external web server stores your HTML files and sends them to a user's web browser over the internet when requested
-  On an external server:
-  The Request: You type a website address into your browser. Your browser sends an HTTP request across the internet to the external server's IP address.
-  The Lookup: The server receives the request, looks in its storage folders for the requested HTML file (such as index.html), and prepares a reply.
-  The Response: The server sends the raw HTML text back to your browser with a success status code (like 200 OK).
-  The Rendering: Your browser reads the incoming HTML code and turns it into the visual webpage you see on your screen.
-  Loading Extra Files: If your HTML links to other files like CSS stylesheets, JavaScript, or images, your browser sends separate, follow-up requests to the server to grab those pieces.
-`
+# HTML:
+## Working of HTML:
+* An external web server stores your HTML files and sends them to a user's web browser over the internet when requested
+* On an external server:
+    The Request: You type a website address into your browser. Your browser sends an HTTP request across the internet to the external server's IP address.
+    The Lookup: The server receives the request, looks in its storage folders for the requested HTML file (such as index.html), and prepares a reply.
+    The Response: The server sends the raw HTML text back to your browser with a success status code (like 200 OK).
+    The Rendering: Your browser reads the incoming HTML code and turns it into the visual webpage you see on your screen.
+    Loading Extra Files: If your HTML links to other files like CSS stylesheets, JavaScript, or images, your browser sends separate, follow-up requests to the server to grab those pieces.
+```html
    http://   localhost   :3000   /assets/styles.css   ?theme=dark
   ──┬──    ────┬────   ──┬──   ────────┬─────────   ─────┬─────
     │          │         │             │                 └── Query Parameters
@@ -21,25 +20,24 @@ An external web server stores your HTML files and sends them to a user's web bro
     │              (Mapped internally by your computer to IP 127.0.0.1)
     └── Protocol/Scheme 
         (Usually unencrypted HTTP during development)
-`
-##HTML Document Format:## 
-  Document type Declaration: 
+```
+## HTML Document Format:
+  ### Document type Declaration: 
   This statement tells the web browser what versin of HTML the document is written in.It helps the browser interpret and display the code correctly. 
-
     ` <!DOCTYPE html> `
 
-  HTML Tag: 
+  ### HTML Tag: 
   It is the starting point or the main container of the webpage.It is like the root or base of a tree which other elements are branch out.All the text,images and links is nested with this HTML Tag. 
-
      ` <html> `
 
-  Head: 
+  ### Head: 
   The head section is like a store room for important details about the webpage,such as its title,design,instructions and extra features.It contains the background information that helps the webpage function correctly and look good. 
       `<head><!--Other meta information--></head> `
-  Body:
+  ### Body:
   the body section of a webpage is where you find all the main content like text,images,headings,and lists.
-##1_Elements of HTML: ##
-`
+
+## 1_Elements of HTML:
+```html
   <!DOCTYPE html> 
   This declaration defines that the document is an HTML5 document. It must always be the very first line of your code. 
   <html>...</html> 
@@ -50,18 +48,20 @@ An external web server stores your HTML files and sends them to a user's web bro
   The <title> tag sets the title of the webpage. This is what you see in the browser tab and what search engines use as the main title in search results. 
   <body>...</body> 
   The <body> tag contains all the visible content of your webpage—headings, paragraphs, images, links, etc. 
-`
-  Essential HTML Elements: 
+```
+  ### Essential HTML Elements: 
   Elements are the building blocks of HTML. These are the tags that can we used everyday. 
-  Basic
- ` <h1> to <h6> 	Defines HTML headings
+  #### Basic
+ ```html 
+  <h1> to <h6> 	Defines HTML headings
   <p> 	Defines a paragraph
   <br> 	Inserts a single line break
   <hr> 	Defines a thematic change in the content
   <!--...--> 	Defines a comment
-`
-  Formatting
-  `<b> - Bold text
+```
+  #### Formatting
+  ```html 
+  <b> - Bold text
   <strong> - Important text
   <i> - Italic text
   <em> - Emphasized text
@@ -71,9 +71,10 @@ An external web server stores your HTML files and sends them to a user's web bro
   <ins> - Inserted text
   <sub> - Subscript text
   <sup> - Superscript text
-  `
-  Forms
-  `<form> 	Defines an HTML form for user input
+  ```
+  #### Forms and links
+  ```html
+  <form> 	Defines an HTML form for user input
   <input> 	Defines an input control
   <textarea> 	Defines a multiline input control (text area)
   <button> 	Defines a clickable button
@@ -84,14 +85,14 @@ An external web server stores your HTML files and sends them to a user's web bro
   <fieldset> 	Groups related elements in a form
   <legend> 	Defines a caption for a <fieldset> element
   <datalist> 	Specifies a list of pre-defined options for input controls
-  <output> 	Defines the result of a calculation`
+  <output> 	Defines the result of a calculation.
 
-  Links
-  `<a> 	Defines a hyperlink
+  ```html
+  <a> 	Defines a hyperlink
   <link> 	Defines the relationship between a document and an external resource (most used to link to style sheets)
-  <nav> 	Defines navigation links`
-
-##2_Attributes:## 
+  <nav> 	Defines navigation links
+    ```
+## 2_Attributes:
   All HTML elements can have attributes 
   Attributes provide additional information about elements 
   Attributes are always specified in the start tag 
@@ -449,7 +450,8 @@ An external web server stores your HTML files and sends them to a user's web bro
           Adding an HTML email link to your webpage can expose your email address to spam. Automated programs, known as email harvesters, can scan web pages for email addresses and add them to spam lists.
            This can result in a significant increase in unwanted emails.
 
-##12_HTML Image tag:## 
+##12_HTML Image tag:##
+  
   The HTML <img> tag is used to embed an image in a web page. 
   Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image. 
   The <img> tag is empty, it contains attributes only, and does not have a closing tag. 
@@ -467,7 +469,7 @@ An external web server stores your HTML files and sends them to a user's web bro
 
      `<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">` 
 
- ```
+ 
 
  
 
