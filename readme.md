@@ -603,7 +603,116 @@ If you have your images in a sub-folder, you must include the folder name in the
 Example
 `<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">`
 
- 
+## 13_Favicon
+ * It is a small-sized image that displays in the browser's tab just before the page title. 
+ * Favicon is defined by using the `<link>` tag with the "rel=icon" attribute.
+ ```json
+ FaviconDimension 	Used For
+  32x32    	        Desktop Browsers
+  57x57             Mac ios
+  76x76   	        Apple ipad
+  96x96 	          Google TV
+  120x120 	        Iphone Retina Touch Screen
+  128x128 	        Chrome Web Store, Windows 8* Screen
+  144x144 	        Internet Explorer 10 Metro
+  152x152 	        Apple Ipad
+  167x167 	        Apple Ipad
+  180x180 	        Apple Iphones
+  192x192 	        Google Developer Apps
+  195x195 	        Opera Speed Dial
+  196x196 	        Android Home of Chrome
+  228x228 	        Opera Cast Icon
+ ```
+ **Syntax**
+ `<link rel="icon" href="logo.jpg" type="image/x-icon">`
+
+  ### How To Add a Favicon in HTML
+    You can add a favicon to a webpage by using the `<link>` tag with the rel attribute set to "icon". The `<link>` tag is a head element, so it must be placed within the `<head>` tag.
+## Block and Inline Elements
+  Every HTML element has a default display value, depending on what type of element it is.
+  The two most common display values are block and inline.
+ ### Block-level Elements
+  A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+  A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+  Two commonly used block elements are: `<p>` and `<div>`.
+  The `<p>` element defines a paragraph in an HTML document.
+  The `<div>` element defines a division or a section in an HTML document.
+
+  The `<p>` element is a block-level element.
+  The `<div>` element is a block-level element.
+  ```html
+  <p>Hello World</p>
+  <div>Hello World</div>
+  ```
+ ### Inline Elements
+  An inline element does not start on a new line.
+  An inline element only takes up as much width as necessary.
+  This is a `<span>` element inside a paragraph.
+   `<span>Hello World</span> `
+   Eg:
+   The `<div>` element is often used as a container for other HTML elements.
+   ```html
+    <div style="background-color:black;color:white;padding:20px;">
+    <h2>Heading</h2>
+    <p>This is a sample text by using div element. So we can make the div element as a container .</p>
+    </div>
+  ```
+  The `<span>` element is an inline container used to mark up a part of a text, or a part of a document.
+  The `<span>` element has no required attributes, but style, class and id are common.
+  ```html
+     <p>I have a <span style="color:blue;font-weight:bold;">blue</span>
+     pen and my brother has a  <span style="color:darkolivegreen;font-weight:bold;">dark green</span> pen.</p>
+  ```
+## 17_Div Element
+  The `<div>` element is used as a container for other HTML elements.
+  The `<div>` element is by default a block element, meaning that it takes all available width, and comes with line breaks before and after.
+  The `<div>` element has no required attributes, but style, class and id are common.
+## 18_HTML ID's
+ *  The id attribute is used to specify a unique id for an HTML element
+ *  The value of the id attribute must be unique within the HTML document
+ *  The id attribute is used by CSS and JavaScript to style/select a specific element
+ *  The value of the id attribute is case sensitive
+ *  The id attribute is also used to create HTML bookmarks
+ *  JavaScript can access an element with a specific id with the getElementById() method
+ *  In css id can be mentioned as `#` by mentioning the id name in the element
+ **Note:**A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page
+ **Eg**
+ ```html
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>
+```
+
+**For Creation of Bookmark**
+
+```html
+First, create a bookmark with the id attribute:
+<h2 id="I1">Introduction</h2>
+
+Then, add a link to the bookmark , from within the same page:
+Example
+<a href="#I1">To learn from the begining go to introduction page!!</a>
+
+Or, add a link to the bookmark , from another page:
+<a href="html_demo.html#I1">Jump to Introduction</a
+```
+
+
 
  
 
