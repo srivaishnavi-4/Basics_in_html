@@ -1,5 +1,5 @@
 # HTML:
-## Working of HTML: 
+## Working of HTML:
 * An external web server stores your HTML files and sends them to a user's web browser over the internet when requested
 * On an external server:
     The Request: You type a website address into your browser. Your browser sends an HTTP request across the internet to the external server's IP address.
@@ -146,12 +146,12 @@
   Search engines use the headings to index the structure and content of your web pages. 
   Users often skim a page by its headings. It is important to use headings to show the document structure. 
   <h1> headings should be used for main headings, followed by <h2> headings, then the less important <h3>, and so on. 
-  ```html
+
   For example: 
-  <h1> - Page title 
-  <h2> - Section titles 
-  <h3> - Sub-sections 
-  ```
+  `<h1>` - Page title 
+  `<h2>` - Section titles 
+  `<h3>` - Sub-sections 
+
   Each heading has a default  size details. We can specify the size by using the style attribute. 
 
 ## 4_Paragraph tags: 
