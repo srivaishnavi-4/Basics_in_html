@@ -1,5 +1,5 @@
 # HTML:
-## Working of HTML:
+## Working of HTML: 
 * An external web server stores your HTML files and sends them to a user's web browser over the internet when requested
 * On an external server:
     The Request: You type a website address into your browser. Your browser sends an HTTP request across the internet to the external server's IP address.
