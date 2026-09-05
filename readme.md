@@ -628,7 +628,61 @@ Example
 
   ### How To Add a Favicon in HTML
     You can add a favicon to a webpage by using the `<link>` tag with the rel attribute set to "icon". The `<link>` tag is a head element, so it must be placed within the `<head>` tag.
-## Block and Inline Elements
+## 15_Lists
+  HTML lists are group or collection of items. These items can be both organized and unorganized depending on the requirement. They help in organizing, structuring, and presenting information to make it more user-friendly, readable, and accessible
+  ordered, unordered, and definition lists
+  All lists must contain one or more list elements.
+  ### Unordered Lists
+  display lists of items that are not in a specific order
+  lists are marked with bullet points
+  `<ul>` tag is used along with the `<li>` tag
+  `<li>` mentions list items
+```html
+  <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>JavaFX</li>
+   </ul>
+```
+  ### Ordered Lists
+   items that are in a specific order. 
+   lists are marked with numbers by default
+   you can change the numbers into alphabets, roman numbers, etc. 
+   by using the type attribute or the CSS list-style-type property
+  `<ol>` tag is used along with the `<li>` tag
+```html
+ <ol>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>JavaFX</li>
+   </ol>
+```
+  ### Definition Lists
+  lists of items with their corresponding descriptions.
+  The definition lists are created by using the `<dl>`, `<dt>`, and `<dd>` tags.
+  Where the `<dl>` tag specifies the "definition list", the `<dt>` tag specifies the "definition term", and the `<dd>` tag specifies the "definition description".
+```html
+ <dl>
+        <dt>HTML</dt>
+        <dd>HyperText markup languague</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheet</dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+    </dl>
+```
+  ### Nested Lists
+  within another list is known as a nested list
+
+
+
+
+
+## 16_Block and Inline Elements
   Every HTML element has a default display value, depending on what type of element it is.
   The two most common display values are block and inline.
  ### Block-level Elements
@@ -709,8 +763,125 @@ Example
 <a href="#I1">To learn from the begining go to introduction page!!</a>
 
 Or, add a link to the bookmark , from another page:
-<a href="html_demo.html#I1">Jump to Introduction</a
+<a href="html_demo.html#I1">Jump to Introduction</a>
 ```
+## 19_IFrames
+  HTML iframe is an inline frame that allows you to embed another document within the current HTML document. Whenever you want to display another webpage within the webpage, you can use an iframe. 
+  ### Creating iframe (Inline Frame)
+  `<iframe>` tag creates a rectangular region at a specified place within the HTML document 
+  You can set the name height and width of an HTML iframe by using the height and width attributes of the `<iframe>` tag.
+  `<iframe src="url" title="description"></iframe>`
+  We can style the iframe by using external css.
+  ### Multiple Iframes
+  You can embed multiple documents (webpages) within a webpage. HTML allows you to use multiple `<iframe>` tags in an HTML document.
+  **Note:** Use of multiple iframes may slow down your page loading speed.
+## 24_Semantic Elements
+  Semantic HTML tags are markup elements that clearly describe their meaning to both the browser and the developer.
+  ### Common Semantic Tags
+  `<header>`: Represents introductory content or a set of navigational links at the top of a page or section.
+  `<nav>`: Defines a block of navigation links.
+  `<main>`: Specifies the dominant, unique content of the body of a document.
+  `<section>`: Groups related content that shares a thematic grouping or purpose.
+  `<article>`: Holds self-contained, independent content like a blog post or news story.
+  `<aside>`: Contains tangentially related content like sidebars or call-out boxes.
+  `<footer>`: Houses footer information like copyright notices or author details. 
+  ### Why Use Semantic Tags?
+  Accessibility: Screen readers and assistive tools use these tags to help users navigate a page efficiently.
+  SEO: Search engines better understand the structure and importance of your content.
+  Maintainability: Code is cleaner and easier for other developers to read than a generic file full of `<div>` tags
+```html
+<body>
+
+    <!-- Header: Page title and primary navigation -->
+    <header>
+        <h1>Sample Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main: Unique, primary content of the document -->
+    <main>
+        
+        <!-- Section: A distinct thematic grouping of content -->
+        <section id="articles">
+            <h2>Latest Tech Articles</h2>
+
+            <!-- Article 1: Independent, self-contained post -->
+            <article>
+                <h3>Understanding Semantic HTML</h3>
+                <p>Published on: <time datetime="2026-09-05">September 5, 2026</time></p>
+                <p>Semantic tags give meaning to your web structure, making it highly accessible and SEO-friendly.</p>
+                <a href="#read-more-1">Read full article...</a>
+            </article>
+
+            <!-- Article 2: Independent, self-contained post -->
+            <article>
+                <h3>The Future of CSS</h3>
+                <p>Published on: <time datetime="2026-08-28">August 28, 2026</time></p>
+                <p>Explore modern layout tools, container queries, and new functional selectors coming to CSS.</p>
+                <a href="#read-more-2">Read full article...</a>
+            </article>
+
+        </section>
+
+        <!-- Aside: Tangential or sidebar content -->
+        <aside>
+            <h3>About the Author</h3>
+            <p>Alex is a frontend developer focused on building clean, fully accessible user experiences.</p>
+            <h3>Newsletter Signup</h3>
+            <form>
+                <input type="email" placeholder="Enter your email" aria-label="Email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </aside>
+
+    </main>
+
+    <!-- Footer: Copyright, terms, and contact links -->
+    <footer>
+        <p>&copy; 2026  All rights reserved.</p>
+        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    </footer>
+</body>
+```
+## 25_Entities
+  Reserved characters in HTML must be replaced with entities:
+    < (less than) = &lt;
+    > (greater than) = &gt;
+
+  HTML Character Entities
+  Some characters are reserved in HTML.
+  If you use the less than `(<)` or greater than `(>)` signs in your HTML text, the browser might mix them with tags.
+  Entity names or entity numbers can be used to display reserved HTML characters.
+  Entity names look like this:
+  `&entity_name;`
+  Entity numbers look like this:
+  `&#entity_number;`
+  To display a less than sign (<) we must write: `&lt;` or `&#60;`
+
+  Some Useful HTML Character Entities
+```html
+  Result 	Description 	         Name 	    Number 	
+         non-breaking space 	   &nbsp; 	  &#160; 	
+  < 	   less than               &lt; 	    &#60; 	
+  > 	   greater than 	         &gt; 	    &#62; 	
+  & 	   ampersand             	 &amp; 	    &#38; 	
+  " 	   double quotation mark 	 &quot; 	  &#34; 	
+  ' 	   single quotation mark 	 &apos; 	  &#39; 	
+  ¢ 	   cent 	                 &cent; 	  &#162; 	
+  £ 	   pound 	                 &pound;  	&#163; 	
+  ¥ 	   yen                   	 &yen; 	    &#165; 	
+  € 	   euro 	                 &euro; 	  &#8364; 	
+  © 	   copyright 	             &copy; 	  &#169; 	
+  ® 	   registered trademark 	 &reg;    	&#174; 	
+  ™ 	   trademark 	             &trade;  	&#8482;
+```
+
 
 
 

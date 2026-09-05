@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Semantic HTML Layout</title>
+</head>
+<body>
+
+    <!-- Header: Page title and primary navigation -->
+    <header>
+        <h1>Sample Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main: Unique, primary content of the document -->
+    <main>
+        
+        <!-- Section: A distinct thematic grouping of content -->
+        <section id="articles">
+            <h2>Latest Tech Articles</h2>
+
+            <!-- Article 1: Independent, self-contained post -->
+            <article>
+                <h3>Understanding Semantic HTML</h3>
+                <p>Published on: <time datetime="2026-09-05">September 5, 2026</time></p>
+                <p>Semantic tags give meaning to your web structure, making it highly accessible and SEO-friendly.</p>
+                <a href="#read-more-1">Read full article...</a>
+            </article>
+
+            <!-- Article 2: Independent, self-contained post -->
+            <article>
+                <h3>The Future of CSS</h3>
+                <p>Published on: <time datetime="2026-08-28">August 28, 2026</time></p>
+                <p>Explore modern layout tools, container queries, and new functional selectors coming to CSS.</p>
+                <a href="#read-more-2">Read full article...</a>
+            </article>
+
+        </section>
+
+        <!-- Aside: Tangential or sidebar content -->
+        <aside>
+            <h3>About the Author</h3>
+            <p>Alex is a frontend developer focused on building clean, fully accessible user experiences.</p>
+            <h3>Newsletter Signup</h3>
+            <form>
+                <input type="email" placeholder="Enter your email" aria-label="Email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </aside>
+
+    </main>
+
+    <!-- Footer: Copyright, terms, and contact links -->
+    <footer>
+        <p>&copy; 2026  All rights reserved.</p>
+        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>
