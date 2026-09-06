@@ -627,7 +627,169 @@ Example
  `<link rel="icon" href="logo.jpg" type="image/x-icon">`
 
   ### How To Add a Favicon in HTML
-    You can add a favicon to a webpage by using the `<link>` tag with the rel attribute set to "icon". The `<link>` tag is a head element, so it must be placed within the `<head>` tag.
+  You can add a favicon to a webpage by using the `<link>` tag with the rel attribute set to "icon". The `<link>` tag is a head element, so it must be placed within the `<head>` tag.
+## 14_Tables
+  HTML tables represent data, such as text, images, etc. in a structured format with rows and columns.
+  HTML tables offer a visual structure that aids in clarity and comprehension, making them a fundamental element in web development.
+  You can create a table in HTML by using the `<table>` tag along with several tags that define the structure and content inside the table. The primary tags that are used with the `<table>` tag are `<tr>`, `<td>`, and `<th>`.
+  Creating tables in HTML involves several elements that define the structure and content. The primary tags used are `<table>`, `<tr>`, `<td>`, and `<th>`.
+    HTML `<table>` Tag: This tag is used to create the table that wrap the rows and columns within it.
+    HTML `<tr>` Tag: Stands for "table row" and is used to create a row within the table.
+    HTML `<td>` Tag: Represents "table data" and is used to create standard cells within a row.
+    HTML `<th>` Tag: Represents "table header" and is used to create header cells within a row.
+  Styling HTML Tables
+  You can also style an HTML table using CSS properties to give it a custom appearance. Either you can create classes to apply styles on a table, or you can simply write internal CSS properties to style the table.
+```html
+<head>
+   <style>
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+   }
+   th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+   }
+   th {
+      background-color: #f2f2f2;
+   }
+   </style>
+</head>
+<body>
+    <h2>HTML Table</h2>
+    <p>This table includes table header.
+    <table>
+        <tr>
+           <th>Header 1</th>
+           <th>Header 2</th>
+           <th>Header 3</th>
+        </tr>
+        <tr>
+           <td>Data 1</td>
+           <td>Data 2</td>
+           <td>Data 3</td>
+        </tr>
+        <tr>
+           <td>Data 4</td>
+           <td>Data 5</td>
+           <td>Data 6</td>
+        </tr>
+    </table>
+  <body>
+```
+Colspan
+To make a cell span over multiple columns, use the colspan attribute
+```html
+<table>
+  <tr>
+    <th colspan="2">Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>xxx</td>
+    <td>yyy</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td>aaa</td>
+    <td>zzz</td>
+    <td>57</td>
+  </tr>
+</table>
+```
+Rowspan
+To make a cell span over multiple rows, use the rowspan attribute
+```html
+<table>
+  <tr>
+    <th>Name</th>
+    <td>Jill</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Phone</th>
+    <td>123456789</td>
+  </tr>
+  <tr>
+    <td>987654321</td>
+</tr>
+</table>
+```
+### Colgroup
+The <colgroup> element should be used as a container for the column specifications.
+Each group is specified with a <col> element.
+The span attribute specifies how many columns get the style.
+The style attribute specifies the style to give the columns.
+
+```html
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Colgroup</h2>
+<p>Add the a colgroup with a col element that spans over two columns to define a style for the two columns:</p>
+
+<table style="width: 100%;">
+<colgroup>
+  <col span="2" style="background-color: #D6EEEE">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+</body>
+```
+
 ## 15_Lists
   HTML lists are group or collection of items. These items can be both organized and unorganized depending on the requirement. They help in organizing, structuring, and presenting information to make it more user-friendly, readable, and accessible
   ordered, unordered, and definition lists
@@ -677,11 +839,6 @@ Example
 ```
   ### Nested Lists
   within another list is known as a nested list
-
-
-
-
-
 ## 16_Block and Inline Elements
   Every HTML element has a default display value, depending on what type of element it is.
   The two most common display values are block and inline.
@@ -721,6 +878,105 @@ Example
   The `<div>` element is used as a container for other HTML elements.
   The `<div>` element is by default a block element, meaning that it takes all available width, and comes with line breaks before and after.
   The `<div>` element has no required attributes, but style, class and id are common.
+Example
+A `<div>` element with HTML elements:
+```html
+<div>
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>London has over 9 million inhabitants.</p>
+</div>
+```
+Center align a `<div>` element
+If you have a `<div>` element that is not 100% wide, and you want to center-align it, set the CSS margin property to auto.
+Example
+```html
+<style>
+div {
+  width:300px;
+  margin:auto;
+}
+</style>
+```
+Multiple `<div>` elements
+You can have many `<div>` containers on the same page.
+Example
+```html
+<div>
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>London has over 9 million inhabitants.</p>
+</div>
+
+<div>
+  <h2>Oslo</h2>
+  <p>Oslo is the capital city of Norway.</p>
+  <p>Oslo has over 700,000 inhabitants.</p>
+</div>
+
+<div>
+  <h2>Rome</h2>
+  <p>Rome is the capital city of Italy.</p>
+  <p>Rome has over 4 million inhabitants.</p>
+</div>
+```
+There are different methods for aligning elements side by side, all include some CSS styling. We will look at the most common methods:
+Float
+The CSS float property was not originally meant to align `<div>` elements side-by-side, but has been used for this purpose for many years.
+The CSS float property is used for positioning and formatting content and allows elements to be positioned horizontally, rather than vertically.
+Example
+```html
+<style>
+.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+.mycontainer div {
+  width:33%;
+  float:left;
+}
+</style>
+```
+Inline-block
+If you change the `<div>` element's display property from block to inline-block, the `<div>` elements will no longer add a line break before and after, and will be displayed side by side instead of on top of each other.
+Example
+How to use display: inline-block to align div elements side by side:
+```html
+<style>
+div {
+  width: 30%;
+  display: inline-block;
+}
+</style>
+```
+Flex
+The CSS Flexbox Layout Module was introduced to make it easier to design flexible responsive layout structure without using float or positioning.
+To make the CSS flex method work, surround the `<div>` elements with another `<div>` element and give it the status as a flex container.
+Example
+How to use flex to align div elements side by side:
+```html
+<style>
+.mycontainer {
+  display: flex;
+}
+.mycontainer > div {
+  width:33%;
+}
+</style>
+```
+Grid
+The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
+The CSS grid method requires that you surround the `<div>` elements with another `<div>` element and give the status as a grid container, and you must specify the width of each column.
+Example
+How to use grid to align `<div>` elements side by side:
+```html
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+</style>
+``` 
 ## 18_HTML ID's
  *  The id attribute is used to specify a unique id for an HTML element
  *  The value of the id attribute must be unique within the HTML document
@@ -775,6 +1031,165 @@ Or, add a link to the bookmark , from another page:
   ### Multiple Iframes
   You can embed multiple documents (webpages) within a webpage. HTML allows you to use multiple `<iframe>` tags in an HTML document.
   **Note:** Use of multiple iframes may slow down your page loading speed.
+## 20_Javascript in HTML
+  JavaScript makes HTML pages more dynamic and interactive.
+  Example
+  My First JavaScript
+  The HTML `<script>` Tag
+  The HTML `<script>` tag is used to define a client-side script `(JavaScript)`.
+  The `<script>` element either contains script statements, or it points to an external script file through the src attribute.
+  Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.
+  To select an HTML element, JavaScript most often uses the `document.getElementById()` method.
+  This JavaScript example writes `"Hello JavaScript!"` into an HTML element with `id="demo"`:
+  Example
+```html
+  <script>
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+  </script>
+  ```
+  Here are some examples of what JavaScript can do:
+  Example
+  JavaScript can change content:
+`document.getElementById("demo").innerHTML = "Hello JavaScript!";`
+  JavaScript can change styles:
+```html  
+  <script>
+  document.getElementById("demo").style.fontSize = "25px";
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.backgroundColor = "yellow";
+  </script>
+```
+  Example
+  JavaScript can change attributes:
+  `document.getElementById("image").src = "picture.gif";`
+  The HTML `<noscript>` Tag
+  The HTML `<noscript>` tag defines an alternate content to be displayed to users that have disabled scripts in their browser or have a browser that doesn't support scripts:
+  Example
+```html
+  <script>
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+  </script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript> 
+```
+For learning the styling of javascript go to the javascript file
+## 21_File Paths
+  A file path describes the location of a file in a web site's folder structure.
+  File Path Examples
+```html
+  Path	                      Description
+  <img src="picture.jpg">    	The "picture.jpg" file is located in the same folder as the current page
+  <img src="images/picture.jpg">The "picture.jpg" file is located in the images folder in the current folder
+  <img src="/images/picture.jpg">The "picture.jpg" file is located in the images folder at the root of the current web
+  <img src="../picture.jpg">  The "picture.jpg" file is located in the folder one level up from the current folder
+```
+  HTML File Paths
+    A file path describes the location of a file in a web site's folder structure.
+    File paths are used when linking to external files, like:
+      Web pages
+      Images
+      Style sheets
+      JavaScripts
+Absolute File Paths
+An absolute file path is the full URL to a file:
+Example
+`<img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain">`
+The `<img>` tag is explained in the chapter: HTML Images.
+Relative File Paths
+A relative file path points to a file relative to the current page.
+In the following example, the file path points to a file in the images folder located at the root of the current website:
+Example
+`<img src="/images/picture.jpg" alt="Mountain">`
+In the following example, the file path points to a file in the images folder located in the current folder:
+Example
+`<img src="images/picture.jpg" alt="Mountain">`
+In the following example, the file path points to a file in the images folder located in the folder one level up from the current folder:
+Example
+`<img src="../images/picture.jpg" alt="Mountain">` 
+
+## 22_Layouts
+HTML has several semantic elements that define the different parts of a web page:
+HTML5 Semantic Elements 	
+    `<header>` - Defines a header for a document or a section
+    `<nav>` - Defines a set of navigation links
+    `<section>` - Defines a section in a document
+    `<article>` - Defines independent, self-contained content
+    `<aside>` - Defines content aside from the content (like a sidebar)
+    `<footer>` - Defines a footer for a document or a section
+    `<details>` - Defines additional details that the user can open and close on demand
+    `<summary>` - Defines a heading for the `<details>` element
+HTML Layout Techniques
+There are four different techniques to create multicolumn layouts. Each technique has its pros and cons:
+  * CSS frameworks
+  * CSS float property
+  * CSS flexbox
+  * CSS grid
+### CSS Frameworks
+If you want to create your layout fast, you can use a CSS framework, like W3.CSS or Bootstrap.
+### Float
+The float property specifies how an element should float within its container.
+It places an element on the left or right side of its container, allowing text and inline elements to wrap around it.
+The float property can have one of the following values:
+    left - The element floats to the left of its container
+    right - The element floats to the right of its container
+    none - Default. The element does not float and is displayed just where it occurs in the text
+    inherit - The element inherits the float value of its parent
+Tip: The float property is often used to wrap text around images!
+### CSS Flexbox (Flexible Box Layout)
+CSS Flexbox is short for the CSS Flexible Box Layout module.
+Flexbox is a layout model for arranging items (horizontally or vertically) within a container, in a flexible and responsive way.
+Flexbox makes it easy to design a flexible and responsive layout, without using float or positioning.
+### Flexbox vs. Grid
+CSS Flexbox is used for a one-dimensional layout, with rows OR columns.
+CSS Grid is used for a two-dimensional layout, with rows AND columns.
+CSS Flexbox Components
+A flexbox always consists of:
+    A Flex Container - The parent (container) element, where the display property is set to flex or inline-flex
+    One or more Flex Items - The direct children of the flex container automatically becomes flex items
+### CSS Grid Layout Module
+The Grid Layout Module offers a grid-based layout system, with rows and columns.
+The Grid Layout Module allows developers to easily create complex web layouts.
+The Grid Layout Module makes it easy to design a responsive layout structure, without using float or positioning.
+A grid always consists of:
+    A Grid Container - The parent (container) element, where the display property is set to grid or inline-grid
+    One or more Grid Items - The direct children of the grid container automatically becomes grid items
+## 23_Responsive web design
+  Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones):
+  ### Setting The Viewport
+   To create a responsive website, add the following `<meta>` tag to all your web pages:
+    Example
+  `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+    This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling.
+  ### Responsive Images
+  Responsive images are images that scale nicely to fit any browser size.
+  Using the width Property
+  If the CSS width property is set to 100%, the image will be responsive and scale up and down:
+  Example
+  `<img src="img_girl.jpg" style="width:100%;">`
+Notice that in the example above, the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the max-width property instead.
+  Using the max-width Property
+  If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:
+  Example
+`<img src="img_girl.jpg" style="max-width:100%;height:auto;">`
+  The HTML `<picture>` element allows you to define different images for different browser window sizes.
+Example
+```html
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_smallflower.jpg" alt="Flowers">
+</picture>
+```
+Responsive Text Size
+The text size can be set with a "vw" unit, which means the "viewport width".
+Example
+`<h1 style="font-size:10vw">Hello World</h1>`
+Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+Media Queries
+In addition to resize text and images, it is also common to use media queries in responsive web pages.
+With media queries you can define completely different styles for different browser sizes.
+Example: resize the browser window to see that the three div elements below will display horizontally on large screens and stack vertically on small screens:
+
 ## 24_Semantic Elements
   Semantic HTML tags are markup elements that clearly describe their meaning to both the browser and the developer.
   ### Common Semantic Tags
@@ -881,8 +1296,265 @@ Or, add a link to the bookmark , from another page:
   ® 	   registered trademark 	 &reg;    	&#174; 	
   ™ 	   trademark 	             &trade;  	&#8482;
 ```
+## 26_Encoding
+URLs can only be sent over the Internet using the ASCII character-set. If a URL contains characters outside the ASCII set, the URL has to be converted.
+encoding converts non-ASCII characters into a format that can be transmitted over the Internet.
+encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits.
+URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20.
+**Eg:Hello Günter is encoded as text=Hello+G%C3%BCnter**
+## 27_URL Encoding
+A URL is another word for a web address.
+A URL can be composed of words ww.likeweb.com, or an Internet Protocol (IP) address (e.g. 192.68.20.50).
+Most people enter the name when surfing, because names are easier to remember than numbers.
+URL - Uniform Resource Locator
+Web browsers request pages from web servers by using a URL.
+A Uniform Resource Locator (URL) is used to address a document (or other data) on the web.
+A web address like https://www.exampleweb.com/html/default.asp follows these syntax rules:
+scheme://prefix.domain:port/path/filename
 
+Explanation:
+    scheme - defines the type of Internet service (most common is http or https)
+    prefix - defines a domain prefix (default for http is www)
+    domain - defines the Internet domain name (like w3schools.com)
+    port - defines the port number at the host (default for http is 80)
+    path - defines a path at the server (If omitted: the root directory of the site)
+    filename - defines the name of a document or resource
+Common URL Schemes
 
+Scheme      	Short for 	                            Used for
+http 	        HyperText Transfer Protocol 	          Common web pages. Not encrypted
+https 	      Secure HyperText Transfer Protocol 	    Secure web pages. Encrypted
+ftp 	        File Transfer Protocol 	                Downloading or uploading files
+file 	  	                                            A file on your computer
+## 28_Forms
+An HTML form is used to collect user input. The user input is most often sent to a server for processing. 
+  ### Form Elements
+  `<form>` 	Defines an HTML form for user input
+  `<input>` 	Defines an input control
+  `<textarea>` 	Defines a multiline input control (text area)
+  `<label>` 	Defines a label for an `<input>` element
+  `<fieldset>` 	Groups related elements in a form
+  `<legend>` 	Defines a caption for a `<fieldset>` element
+  `<select>` 	Defines a drop-down list
+  `<optgroup>` 	Defines a group of related options in a drop-down list
+  `<option>` 	Defines an option in a drop-down list
+  `<button>` 	Defines a clickable button
+  `<datalist>` 	Specifies a list of pre-defined options for input controls
+  `<output>` 	Defines the result of a calculation
+  Here are some of the key attributes that can be used with the `<form>` element:
+    action: Specifies the URL where the form data is sent upon submission.
+    method: Defines the HTTP method used to send the data — either "get" or "post".
+    target: Determines where to display the server’s response (e.g., "_blank", "_self", "_parent", "_top", or an iframe name).
+    enctype: Specifies how form data is encoded when using method="post" (e.g., application/x-www-form-urlencoded, multipart/form-data, text/plain).
+    autocomplete: Controls whether the browser should auto-fill form fields ("on" or "off").
+    novalidate: A Boolean attribute that prevents the form from being validated before submission.
+  Input Types in HTML Forms
+
+Here are the commonly used input types in HTML Forms:
+```html
+  <input type="text">
+  Defines a one-line text input field
+  <input type="password">
+  Defines a password field
+  <input type="submit">
+  Defines a submit button
+  <input type="reset">
+  Defines a reset button
+  <input type="radio">
+  Defines a radio button
+  <input type="email">
+  Validates that the input is a valid email address.
+  <input type="number">
+  Allows the user to enter a number. You can specify min, max, and step attributes for range.
+  <input type="checkbox">
+  Used for checkboxes where the user can select multiple options.
+  <input type="date">
+  Allows the user to select a date from a calendar.
+  <input type="time">
+  Allows the user to select a time.
+  <input type="file">
+  Allows the user to select a file to upload.
+```
+**Syntax**
+```html
+<form>
+      <!--form elements-->
+</form>
+```
+To view the sample code go to the forms file
+## 29_Graphics
+  There are two types in HTML Graphics
+  * Canvas
+  * SVG
+  Canvas
+    The HTML `<canvas>` element is used to draw graphics, on the fly, via JavaScript.
+    The `<canvas>` element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+    Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+    Canvas is supported by all major browsers.
+    A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+The markup looks like this:
+`<canvas id="myCanvas" width="200" height="100"></canvas>`
+Always use the id attribute to link with the javascript code so that it can draws the shapes by using the js functions
+Eg:
+```html
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+</script> 
+```
+  SVG
+    SVG stands for Scalable Vector Graphics
+    SVG is used to define vector-based graphics for the Web
+    SVG defines graphics in XML format
+    Each element and attribute in SVG files can be animated
+    SVG is a W3C recommendation
+    SVG integrates with other standards, such as CSS, DOM, XSL and JavaScript
+  The `<svg>` Element
+  The HTML `<svg>` element is a container for SVG graphics.
+  SVG has several methods for drawing paths, rectangles, circles, polygons, text, and much more.
+```html
+  <svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+```
+## 30_Media
+  In html media can be added through the video,audio and you tube links
+  The HTML `<video>` Element
+  To show a video in HTML, use the `<video>` element:
+  Example
+```html
+  <video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+  </video>
+```
+  How it Works
+  The controls attribute adds video controls, like play, pause, and volume.
+  It is a good idea to always include width and height attributes. If height and width are not set, the page might flicker while the video loads.
+  The `<source>` element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
+  The text between the `<video>` and `</video>` tags will only be displayed in browsers that do not support the `<video>` element.
+  HTML `<video>` Autoplay
+  To start a video automatically, use the autoplay attribute:
+  Example
+```html
+  <video width="320" height="240" autoplay>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+  </video> 
+```
+  The HTML `<audio>` Element
+  To play an audio file in HTML, use the `<audio>` element:
+  Example
+```html
+  <audio controls>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+```
+  HTML Audio - How It Works
+  The controls attribute adds audio controls, like play, pause, and volume.
+  The `<source>` element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+  The text between the `<audio>` and `</audio>` tags will only be displayed in browsers that do not support the `<audio>` element.
+  HTML `<audio>` Autoplay
+  To start an audio file automatically, use the autoplay attribute:
+  Example
+```html
+  <audio controls autoplay>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+```
+  Add muted after autoplay to let your audio file start playing automatically (but muted):
+  Example
+```html
+  <audio controls autoplay muted>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio> 
+```
+  PLug ins
+  Plug-ins were designed to be used for many different purposes:
+    To run Java applets
+    To run Microsoft ActiveX controls
+    To display Flash movies
+    To display maps
+    To scan for viruses
+    To verify a bank id
+  But now most of the plugins were not supported by the browsers
+  The `<object>` Element
+  The `<object>` element is supported by all browsers.
+  The `<object>` element defines an embedded object within an HTML document.
+  It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML
+  Example
+  `<object width="100%" height="500px" data="snippet.html"></object>`
+  Or images if you like:
+  Example
+  `<object data="audi.jpeg"></object>`
+  The `<embed>` Element
+  The `<embed>` element is supported in all major browsers.
+  The `<embed>` element also defines an embedded object within an HTML document.
+  Web browsers have supported the `<embed>` element for a long time. However, it has not been a part of the HTML specification before HTML5.
+  Example
+  `<embed src="audi.jpeg">`
+  Note that the `<embed>` element does not have a closing tag. It can not contain alternative text.
+  The `<embed>` element can also be used to include HTML in HTML:
+  Example
+  `<embed width="100%" height="500px" src="snippet.html">`
+  The easiest way to play videos in HTML, is to use YouTube.
+Converting videos to different formats can be difficult and time-consuming.
+An easier solution is to let YouTube play the videos in your web page.
+Playing a YouTube Video in HTML
+To play your video on a web page, do the following:
+    Upload the video to YouTube
+    Take a note of the video id
+    Define an `<iframe>` element in your web page
+    Let the src attribute point to the video URL
+    Use the width and height attributes to specify the dimension of the player
+    Add any other parameters to the URL (see below)
+Example
+```html
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+```
+YouTube Autoplay + Mute
+You can let your video start playing automatically when a user visits the page, by adding autoplay=1 to the YouTube URL. 
+Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).
+YouTube - Autoplay + Muted
+```html
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+</iframe>
+```
+A comma separated list of videos to play (in addition to the original URL).
+YouTube Loop
+Add playlist=videoID and loop=1 to let your video loop forever.
+loop=0 (default) - The video will play only once.
+loop=1 - The video will loop (forever).
+YouTube - Loop forever
+```html
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe>
+```
+YouTube Controls
+Add controls=0 to NOT display controls in the video player.
+controls=0 - Player controls does not display.
+controls=1 (default) - Player controls is displayed.
+YouTube - Controls
+```html
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+</iframe>  
+```
 
 
  
