@@ -2,15 +2,18 @@
 <html>
     <head>
         <title>Welcome</title>
-        
-        <body>
-            <h1>internal Javascript by using inner html</h1>
-            <p id="demo"></p>
-            <h1>Inline javascript</h1>
-            <button onclick="alert('Hi there!')">Click Me</button>
+        <script src="scipt.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>internal Javascript by using inner html</h1>
+        <p id="demo"></p>
+        <h1>Inline javascript</h1>
+        <button onclick="alert('Hi there!')">Click Me</button>
             <script>
                 document.getElementById("demo").innerHTML = "Hello JavaScript!";
             </script>
+            <h1>External javascript</h1>
+            <p id="samp" onclick="hello()">click me</p>
             <noscript>Your browser does not support JavaScript!</noscript>
         </body>
     </head>

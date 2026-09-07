@@ -356,6 +356,61 @@ We can add comments to your HTML source by using the following syntax:
 Note1: that there is an exclamation point (!) in the start tag, but not in the end tag.
 Note2: Comments are not displayed by the browser, but they can help document your HTML source code.
 
+## 9_Colors
+  can be applied to text,borders and backgrounds
+  forms,links,tables etc..
+  colors can be applied by various forms.
+    RGB
+    HEX
+    HSL
+    HSLA
+    RGBA
+  background-color
+  color
+  border
+  why decimal values are used in RGB:
+  decimal values are easily unserstandable for humans and easy to calculate
+  human redability
+  mapping to bytes
+    computers store each color channel in 8 bits an hold 2^8 (256) different values ranging from 0 to 255
+  Alpha channel support shorthand hex codes cannot easily show opacity
+  using decimal notation shows the clear decimal fraction directly into the code
+  RGB
+    red green blue(in a decimal form)
+    0 to 255 values
+    These 3 color values are mixed to get the actual color
+  RGBA
+    A-alpha
+    can be used for color transparency
+    it can be started from 0 to 1.0
+    0.5 s the semi transparency
+  HEX
+    are specified by combinig the hexadecimal values of red green and blue 
+    with each value ranging from 00 to ff
+    00 represents the lower intensity
+    ff represents the higher intensity
+    value starts with the # sign and includes six digits(##RRGGBB)
+  HSL
+    a color can be specified using hue,saturation and lightness
+    hue is a degree on the color wheel from 0to 360
+    red s 0,120 is green 240 is blue
+    sauration is percentage value
+    0% is a shade of grey
+    100% is full color
+    Lightness is also a percentage 0% is black and 100% is white
+  HSLA
+    comes with an alpha channel
+    0.0 fully transparent and 1.0 no transparent 
+  **Here are the various color values used on the text**
+```html
+       <h1>Font color and color values</h1>
+        <h2 style="color:tomato;">This heading applies the direct color Name</h2><!--direct color-->
+        <p style="color:rgb(40, 145, 132)">This paragraph uses the rgb color values</p><!--rgb color-->
+        <p style="color:rgba(40,145,132,0.5)">This paragraph uses the rgba color values</p><!--rgba color-->
+        <p style="color:#553496">This text is using the HEX color values</p><!--hex color-->
+        <pre style="color:hsl(32, 70%, 59%);">This text is using the hsl color values</pre><!--hsl color-->
+        <pre style="color:hsla(32, 70%, 59%,0.5);">This text is using the hsla color values</pre><!--hsla color-->
+```
 ## 10_HTML CSS Styles:
 
 Css can be used to format the layout of a webpage.
