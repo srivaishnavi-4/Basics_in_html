@@ -1,4 +1,3 @@
-```markdown
 # HTML:
 ## Working of HTML:
 * An external web server stores your HTML files and sends them to a user's web browser over the internet when requested
@@ -308,7 +307,7 @@ Formatting is used to display special types of text
 
 ```
 
-### The difference between the   and :
+### The difference between the `<b>` and `<strong>`:
 
 ```
 <b> defines the text without any importance . 
@@ -327,7 +326,8 @@ For mentioning the importantance of word in a text.
 
 ```
 
-**Eg: This conversation is highly confidential.** ### Difference between the  and  tgs:
+**Eg: This conversation is highly confidential.**
+ ### Difference between the `<i>` and `<em>` tags:
 The HTML  element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.
 Tip: The  tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.
 `Eg:     <i>This text is italic</i>`
